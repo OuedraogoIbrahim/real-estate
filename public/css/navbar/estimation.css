@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.container {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+input {
+    outline: none;
+    padding: 4px;
+    border-radius: 20px;
+}
+
+button {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: oblique;
+    padding: 6px;
+}
+
+.estimation {
+    width: 80%;
+    background-color: rgb(128, 128, 128);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    gap: 20px;
+}
+
+.estimation h1 {
+    color: rgb(139, 43, 43);
+    text-align: center;
+    font-style: oblique;
+}
+
+.estimation form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+}
+
+.elements {
+    border: 2px solid red;
+    margin-top: 20px;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.element {
+    padding: 6px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}

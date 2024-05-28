@@ -1,0 +1,30 @@
+ function updateBalance() {
+            const rows = document.querySelectorAll('tbody tr:not(.total-row)');
+            let totalDebit = 0;
+            let totalCredit = 0;
+
+            rows.forEach((row, index) => {
+                let debit = parseFloat(row.querySelector(`input[name="debit${index + 1}"]`).value) || 0;
+                let credit = parseFloat(row.querySelector(`input[name="credit${index + 1}"]`).value) || 0;
+
+                let previousBalance = 0;
+                if (index > 0) {
+                    previousBalance = parseFloat(rows[index - 1].querySelector('td:last-child').innerText) || 0;
+                }
+
+                let balance = previousBalance + debit - credit;
+
+                if (debit !== 0 || credit !== 0) {
+                    row.querySelector('td:last-child').innerText = balance.toFixed(2);
+                } else {
+                    row.querySelector('td:last-child').innerText = '';
+                }
+
+                totalDebit += debit;
+                totalCredit += credit;
+            });
+
+            document.getElementById('totalDebit').innerText = totalDebit.toFixed(2);
+            document.getElementById('totalCredit').innerText = totalCredit.toFixed(2);
+            document.getElementById('totalBalance').innerText = (totalDebit - totalCredit).toFixed(2);
+        }

@@ -1,0 +1,120 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.statut {
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    background-color: greenyellow;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: bold;
+    animation: statut 1s 4.8s forwards;
+}
+
+@keyframes statut {
+    100% {
+        display: none;
+    }
+}
+
+.creation {
+
+    float: right;
+    background-color: rgba(9, 9, 252, 0.952);
+    padding: 6px;
+    transform: translateX(-80px);
+    margin-bottom: 16px;
+}
+
+.creation:hover {
+    background-color: blue;
+    transition: 0.8s;
+}
+
+.creation a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Couleur du texte des éléments de la dernière colonne td:nth-child(4),
+td:nth-child(5),
+td:nth-child(6) {
+    color: white;
+} */
+
+/* Couleur de fond des éléments de la dernière colonne */
+td:nth-child(5),
+td:nth-child(6),
+td:nth-child(7) {
+    background-color: transparent;
+    /* Fond transparent */
+    margin-right: 16px;
+    /* Ajoute un espace entre chaque élément */
+    transition: background-color 1.8s;
+    /* Ajoute une transition pour le survol */
+}
+
+/* Couleur de fond jaune au survol */
+td:nth-child(5):hover,
+td:nth-child(6):hover,
+td:nth-child(7):hover {
+    background-color: yellow;
+    color: #000;
+    /* Fond jaune au survol */
+}
+
+td:nth-child(5) {
+    background-color: green;
+    /* Fond vert */
+}
+
+td:nth-child(6) {
+    background-color: blue;
+    /* Fond bleu */
+}
+
+td:nth-child(7) {
+    background-color: red;
+    /* Fond rouge */
+}
+
+.links {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    background-color: unset;
+}
+
+span {
+    font-weight: bold;
+    color: white;
+}
